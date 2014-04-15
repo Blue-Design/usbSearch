@@ -3,9 +3,10 @@ OS ?= WINDOWS
 #OS ?= MACOSX
 #OS ?= BSD
 
-CC = i586-mingw32msvc-gcc
-#CC=gcc
-CFLAGS ?= -O2 -Wall -std=c99 
+#CC = i586-mingw32msvc-gcc
+CC=gcc
+#CFLAGS ?= -O2 -Wall -std=c99
+CFLAGS ?= -O2 -Wall
 LIBS = -lhid -lsetupapi -lole32 -loleaut32 -luuid
 
 all: usbSearch.exe listComPorts.exe
