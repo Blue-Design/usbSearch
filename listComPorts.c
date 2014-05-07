@@ -85,7 +85,7 @@ int listComPorts(void)
     DISPATCH_OBJ(colDevices);
 
     dhInitialize(TRUE);
-    dhToggleExceptions(TRUE);
+    dhToggleExceptions(FALSE);
  
     dhGetObject(L"winmgmts:{impersonationLevel=impersonate}!\\\\.\\root\\cimv2",
     //dhGetObject(L"winmgmts:\\\\.\\root\\cimv2",
@@ -136,7 +136,7 @@ int listComPorts(void)
 //
 int main(int argc, char **argv)
 {
-	parse_options(argc, argv);
+    parse_options(argc, argv);
 
     listComPorts();
 
